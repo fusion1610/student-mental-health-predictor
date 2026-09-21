@@ -1,0 +1,24 @@
+__pycache__/
+*.py[cod]
+
+.venv/
+venv/
+env/
+.env
+
+.git/
+.gitignore
+
+.vscode/
+.idea/
+
+.ipynb_checkpoints/
+
+.DS_Store
+
+*.log
+
+ML_Project.ipynb
+ML Project.html
+Student Social Media And Mental Health Impact.csv
+README.md

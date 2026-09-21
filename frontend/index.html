@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Mental Health Predictor</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-shape shape-one"></div>
+    <div class="background-shape shape-two"></div>
+
+    <main class="page-container">
+
+        <!-- Header -->
+        <header class="hero">
+            <div class="hero-icon">
+                🧠
+            </div>
+
+            <div>
+                <h1>Student Mental Health Predictor</h1>
+                <p>
+                    Enter student lifestyle, academic and social media information
+                    to predict the mental health score.
+                </p>
+            </div>
+        </header>
+
+
+        <!-- Main Card -->
+        <section class="prediction-card">
+
+            <form id="predictionForm">
+
+                <!-- Personal Information -->
+                <div class="section">
+
+                    <div class="section-heading">
+                        <div class="section-number">01</div>
+
+                        <div>
+                            <h2>Personal Information</h2>
+                            <p>Basic information about the student</p>
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label for="age">
+                                Age
+                                <span>*</span>
+                            </label>
+
+                            <input
+                                type="number"
+                                id="age"
+                                name="age"
+                                min="10"
+                                max="100"
+                                placeholder="e.g. 21"
+                                required
+                            >
+
+                            <small>Age must be between 10 and 100.</small>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="gender">
+                                Gender
+                                <span>*</span>
+                            </label>
+
+                            <select id="gender" name="gender" required>
+                                <option value="">Select gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="country">
+                                Country
+                                <span>*</span>
+                            </label>
+
+                            <select id="country" name="country" required>
+                                <option value="">Select country</option>
+                                <option value="India">India</option>
+                                <option value="USA">USA</option>
+                                <option value="Canada">Canada</option>
+                                <option value="Australia">Australia</option>
+                                <option value="UK">UK</option>
+                                <option value="Germany">Germany</option>
+                                <option value="Turkey">Turkey</option>
+                                <option value="Mexico">Mexico</option>
+                                <option value="France">France</option>
+                                <option value="Spain">Spain</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="academic_level">
+                                Academic Level
+                                <span>*</span>
+                            </label>
+
+                            <select
+                                id="academic_level"
+                                name="academic_level"
+                                required
+                            >
+                                <option value="">Select academic level</option>
+                                <option value="High School">High School</option>
+                                <option value="Undergraduate">Undergraduate</option>
+                                <option value="Graduate">Graduate</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- Social Media Information -->
+                <div class="section">
+
+                    <div class="section-heading">
+                        <div class="section-number">02</div>
+
+                        <div>
+                            <h2>Social Media Usage</h2>
+                            <p>Information about digital and social media habits</p>
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label for="most_used_platform">
+                                Most Used Platform
+                                <span>*</span>
+                            </label>
+
+                            <select
+                                id="most_used_platform"
+                                name="most_used_platform"
+                                required
+                            >
+                                <option value="">Select platform</option>
+                                <option value="Facebook">Facebook</option>
+                                <option value="LinkedIn">LinkedIn</option>
+                                <option value="Instagram">Instagram</option>
+                                <option value="Snapchat">Snapchat</option>
+                                <option value="Twitter">Twitter</option>
+                                <option value="YouTube">YouTube</option>
+                                <option value="TikTok">TikTok</option>
+                                <option value="LINE">LINE</option>
+                                <option value="KakaoTalk">KakaoTalk</option>
+                                <option value="VKontakte">VKontakte</option>
+                                <option value="WhatsApp">WhatsApp</option>
+                                <option value="WeChat">WeChat</option>
+                            </select>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="purpose_of_use">
+                                Purpose of Use
+                                <span>*</span>
+                            </label>
+
+                            <select
+                                id="purpose_of_use"
+                                name="purpose_of_use"
+                                required
+                            >
+                                <option value="">Select purpose</option>
+                                <option value="Networking">Networking</option>
+                                <option value="Education">Education</option>
+                                <option value="Entertainment">Entertainment</option>
+                                <option value="News">News</option>
+                            </select>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="avg_daily_usage_hours">
+                                Daily Social Media Usage
+                                <span>*</span>
+                            </label>
+
+                            <div class="input-with-unit">
+                                <input
+                                    type="number"
+                                    id="avg_daily_usage_hours"
+                                    name="avg_daily_usage_hours"
+                                    min="0"
+                                    max="24"
+                                    step="0.1"
+                                    placeholder="e.g. 4.5"
+                                    required
+                                >
+
+                                <span>hours</span>
+                            </div>
+
+                            <small>Enter a value between 0 and 24 hours.</small>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="daily_unlocks">
+                                Daily Phone Unlocks
+                                <span>*</span>
+                            </label>
+
+                            <div class="input-with-unit">
+                                <input
+                                    type="number"
+                                    id="daily_unlocks"
+                                    name="daily_unlocks"
+                                    min="0"
+                                    step="1"
+                                    placeholder="e.g. 80"
+                                    required
+                                >
+
+                                <span>times</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- Lifestyle -->
+                <div class="section">
+
+                    <div class="section-heading">
+                        <div class="section-number">03</div>
+
+                        <div>
+                            <h2>Lifestyle & Wellbeing</h2>
+                            <p>Daily habits and wellbeing-related information</p>
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label for="study_hours">
+                                Study Hours
+                                <span>*</span>
+                            </label>
+
+                            <div class="input-with-unit">
+                                <input
+                                    type="number"
+                                    id="study_hours"
+                                    name="study_hours"
+                                    min="0"
+                                    max="24"
+                                    step="0.1"
+                                    placeholder="e.g. 6"
+                                    required
+                                >
+
+                                <span>hours</span>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="physical_activity_hours">
+                                Physical Activity
+                                <span>*</span>
+                            </label>
+
+                            <div class="input-with-unit">
+                                <input
+                                    type="number"
+                                    id="physical_activity_hours"
+                                    name="physical_activity_hours"
+                                    min="0"
+                                    max="24"
+                                    step="0.1"
+                                    placeholder="e.g. 1.5"
+                                    required
+                                >
+
+                                <span>hours</span>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="sleep_hours_per_night">
+                                Sleep Per Night
+                                <span>*</span>
+                            </label>
+
+                            <div class="input-with-unit">
+                                <input
+                                    type="number"
+                                    id="sleep_hours_per_night"
+                                    name="sleep_hours_per_night"
+                                    min="0"
+                                    max="24"
+                                    step="0.1"
+                                    placeholder="e.g. 7.5"
+                                    required
+                                >
+
+                                <span>hours</span>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="stress_level">
+                                Stress Level
+                                <span>*</span>
+                            </label>
+
+                            <select
+                                id="stress_level"
+                                name="stress_level"
+                                required
+                            >
+                                <option value="">Select stress level</option>
+                                <option value="Low">Low</option>
+                                <option value="Medium">Medium</option>
+                                <option value="High">High</option>
+                                <option value="Very High">Very High</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- Error -->
+                <div id="errorMessage" class="error-message">
+                    <span>⚠️</span>
+                    <p id="errorText"></p>
+                </div>
+
+
+                <!-- Submit -->
+                <div class="form-actions">
+
+                    <button
+                        type="button"
+                        id="resetButton"
+                        class="secondary-button"
+                    >
+                        Reset
+                    </button>
+
+                    <button
+                        type="submit"
+                        id="predictButton"
+                        class="primary-button"
+                    >
+                        <span id="buttonText">Predict Mental Health Score</span>
+
+                        <span
+                            id="loadingSpinner"
+                            class="spinner"
+                            hidden
+                        ></span>
+                    </button>
+
+                </div>
+
+            </form>
+
+
+            <!-- Result -->
+            <section
+                id="resultSection"
+                class="result-section"
+                aria-live="polite"
+            >
+
+                <div class="result-icon">
+                    🧠
+                </div>
+
+                <p class="result-label">
+                    Predicted Mental Health Score
+                </p>
+
+                <div id="predictionValue" class="prediction-value">
+                    --
+                </div>
+
+                <p class="result-description">
+                    This score is generated by your machine learning model
+                    based on the information provided.
+                </p>
+
+                <button
+                    type="button"
+                    id="newPredictionButton"
+                    class="new-prediction-button"
+                >
+                    Make Another Prediction
+                </button>
+
+            </section>
+
+        </section>
+
+
+        <footer>
+            <p>
+                Student Mental Health Prediction System
+            </p>
+
+            <span>
+                Machine Learning + FastAPI
+            </span>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
