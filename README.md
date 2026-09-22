@@ -64,6 +64,26 @@ The project combines a **Machine Learning model**, **FastAPI backend**, **HTML/C
 
 ---
 
+## 📊 Model Performance
+
+The model was evaluated using standard regression metrics on the test dataset.
+
+| Metric       |                 Score |
+| ------------ | --------------------: |
+| **R² Score** | **0.880372 (88.04%)** |
+| MAE          |              0.342319 |
+| RMSE         |              0.458380 |
+
+### Model Accuracy
+
+**R² Score: 88.04%**
+
+The model achieves an **R² score of 0.880372**, meaning it explains approximately **88.04% of the variance** in the target variable on the evaluation dataset.
+
+> **Note:** Since this is a regression problem, R² is used as the primary performance metric rather than classification accuracy.
+
+---
+
 ## 📂 Project Structure
 
 ```text
